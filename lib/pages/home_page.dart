@@ -78,20 +78,22 @@ class HomePage extends StatelessWidget {
                       const SizedBox(
                         height: 15,
                       ),
-                      Align(
-                        alignment: Alignment.bottomLeft,
-                        child: OutlinedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, "/decision");
-                            },
-                            style: OutlinedButton.styleFrom(
-                              side: const BorderSide(
-                                  width: 1.0, color: Colors.white),
-                            ),
-                            child: const Text(
-                              "Mulai",
-                              style: TextStyle(color: Colors.white),
-                            )),
+                      Flexible(
+                        child: Align(
+                          alignment: Alignment.bottomLeft,
+                          child: OutlinedButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, "/decision");
+                              },
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(
+                                    width: 1.0, color: Colors.white),
+                              ),
+                              child: const Text(
+                                "Mulai",
+                                style: TextStyle(color: Colors.white),
+                              )),
+                        ),
                       )
                     ],
                   )),

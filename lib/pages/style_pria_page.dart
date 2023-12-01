@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-class StylePriaPage extends StatefulWidget {
+class StylePriaPage extends StatelessWidget {
   const StylePriaPage({super.key});
-
+  
   @override
-  State<StylePriaPage> createState() => _StylePriaPageState();
-}
-
-class _StylePriaPageState extends State<StylePriaPage> {
-  final _future = Supabase.instance.client
+  Widget build(BuildContext context) {
+    final _future = Supabase.instance.client
       .from('hair_styles')
       .select<List<Map<String, dynamic>>>()
       .eq("gender_id", "1");
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
 
         appBar: AppBar(

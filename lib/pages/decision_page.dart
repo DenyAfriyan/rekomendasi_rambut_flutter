@@ -175,7 +175,7 @@ class _DecisionPageState extends State<DecisionPage> {
               },
             ),
             RadioListTile<FaceShapes>(
-              title: const Text('Persegi'),
+              title: const Text('Diamond'),
               value: FaceShapes.diamond,
               groupValue: _characterFaceShapes,
               onChanged: (FaceShapes? value) {
@@ -240,7 +240,16 @@ class _DecisionPageState extends State<DecisionPage> {
                     ),
                     child: const Text("Lihat Hasil"),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>  ResultPage(characteristic: Characteristic(gender, hairType, shortLong, faceShapes, preferenceStyle))));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ResultPage(
+                                  characteristic: Characteristic(
+                                      gender,
+                                      hairType,
+                                      shortLong,
+                                      faceShapes,
+                                      preferenceStyle))));
                     }),
               ),
             ),
